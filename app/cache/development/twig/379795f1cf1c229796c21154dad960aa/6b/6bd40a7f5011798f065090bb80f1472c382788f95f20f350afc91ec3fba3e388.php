@@ -23,8 +23,8 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4f25c6df902f8242e39a70cf5347609387b4a35ba6c6f20fe44fe884ad471417 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4f25c6df902f8242e39a70cf5347609387b4a35ba6c6f20fe44fe884ad471417->enter($__internal_4f25c6df902f8242e39a70cf5347609387b4a35ba6c6f20fe44fe884ad471417_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "splash.twig"));
+        $__internal_db06e3a5bdbd5203ae9abea27db77e75aae66bc99d31801712a00b2234d65ec4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_db06e3a5bdbd5203ae9abea27db77e75aae66bc99d31801712a00b2234d65ec4->enter($__internal_db06e3a5bdbd5203ae9abea27db77e75aae66bc99d31801712a00b2234d65ec4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "splash.twig"));
 
         // line 4
         $template_storage = $context['app']['storage'];
@@ -35,15 +35,15 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4f25c6df902f8242e39a70cf5347609387b4a35ba6c6f20fe44fe884ad471417->leave($__internal_4f25c6df902f8242e39a70cf5347609387b4a35ba6c6f20fe44fe884ad471417_prof);
+        $__internal_db06e3a5bdbd5203ae9abea27db77e75aae66bc99d31801712a00b2234d65ec4->leave($__internal_db06e3a5bdbd5203ae9abea27db77e75aae66bc99d31801712a00b2234d65ec4_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_2de2b4f5e46d733a47a051cb08c197a6584631dd7470bca6fcd591c4a7b55e25 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2de2b4f5e46d733a47a051cb08c197a6584631dd7470bca6fcd591c4a7b55e25->enter($__internal_2de2b4f5e46d733a47a051cb08c197a6584631dd7470bca6fcd591c4a7b55e25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2c333bcab749ed34c2b9ba32b786bf0ab97a80c2e3ba167160fc5cecb0a1046a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2c333bcab749ed34c2b9ba32b786bf0ab97a80c2e3ba167160fc5cecb0a1046a->enter($__internal_2c333bcab749ed34c2b9ba32b786bf0ab97a80c2e3ba167160fc5cecb0a1046a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "<div id=\"primary\" class=\"col-md-12 content-area\">
@@ -54,15 +54,15 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
         echo "</main>
     </div>";
         
-        $__internal_2de2b4f5e46d733a47a051cb08c197a6584631dd7470bca6fcd591c4a7b55e25->leave($__internal_2de2b4f5e46d733a47a051cb08c197a6584631dd7470bca6fcd591c4a7b55e25_prof);
+        $__internal_2c333bcab749ed34c2b9ba32b786bf0ab97a80c2e3ba167160fc5cecb0a1046a->leave($__internal_2c333bcab749ed34c2b9ba32b786bf0ab97a80c2e3ba167160fc5cecb0a1046a_prof);
 
     }
 
     // line 19
     public function block_primary($context, array $blocks = array())
     {
-        $__internal_589e7f9c7a0def130cef036c2943947d4794ea5be1699eb06a8b5b60c63a5c76 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_589e7f9c7a0def130cef036c2943947d4794ea5be1699eb06a8b5b60c63a5c76->enter($__internal_589e7f9c7a0def130cef036c2943947d4794ea5be1699eb06a8b5b60c63a5c76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "primary"));
+        $__internal_1cb473e8fbac31628e2b529e286d594a7562405b67708d09cd66af87c83cd828 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1cb473e8fbac31628e2b529e286d594a7562405b67708d09cd66af87c83cd828->enter($__internal_1cb473e8fbac31628e2b529e286d594a7562405b67708d09cd66af87c83cd828_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "primary"));
 
         // line 21
         $context['_parent'] = $context;
@@ -141,15 +141,15 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_589e7f9c7a0def130cef036c2943947d4794ea5be1699eb06a8b5b60c63a5c76->leave($__internal_589e7f9c7a0def130cef036c2943947d4794ea5be1699eb06a8b5b60c63a5c76_prof);
+        $__internal_1cb473e8fbac31628e2b529e286d594a7562405b67708d09cd66af87c83cd828->leave($__internal_1cb473e8fbac31628e2b529e286d594a7562405b67708d09cd66af87c83cd828_prof);
 
     }
 
     // line 35
     public function block_splashitem($context, array $blocks = array())
     {
-        $__internal_5272c3123bd35b66d484e9f5cd9f8e314d2eb1020305343a0fd137391ad25c4d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5272c3123bd35b66d484e9f5cd9f8e314d2eb1020305343a0fd137391ad25c4d->enter($__internal_5272c3123bd35b66d484e9f5cd9f8e314d2eb1020305343a0fd137391ad25c4d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "splashitem"));
+        $__internal_9ac5aedede3c7048caf44139aeedf050514ca64b5a6c38d5620b49c4b1a98a08 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9ac5aedede3c7048caf44139aeedf050514ca64b5a6c38d5620b49c4b1a98a08->enter($__internal_9ac5aedede3c7048caf44139aeedf050514ca64b5a6c38d5620b49c4b1a98a08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "splashitem"));
 
         // line 36
         echo "    <div class=\"panel panel-default\">
@@ -177,16 +177,13 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
         // line 46
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), "contenttype", array()), "slug", array()) . "/") . $this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), "slug", array())), "html", null, true);
         echo "\">
-                ";
-        // line 47
-        echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), "contenttype", array()), "name", array()) . " ") . $this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), "name", array())), "html", null, true);
-        echo "
+                Ga naar dit onderdeel
             </a>
         </div>
     </div>
 ";
         
-        $__internal_5272c3123bd35b66d484e9f5cd9f8e314d2eb1020305343a0fd137391ad25c4d->leave($__internal_5272c3123bd35b66d484e9f5cd9f8e314d2eb1020305343a0fd137391ad25c4d_prof);
+        $__internal_9ac5aedede3c7048caf44139aeedf050514ca64b5a6c38d5620b49c4b1a98a08->leave($__internal_9ac5aedede3c7048caf44139aeedf050514ca64b5a6c38d5620b49c4b1a98a08_prof);
 
     }
 
@@ -202,7 +199,7 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
 
     public function getDebugInfo()
     {
-        return array (  182 => 47,  178 => 46,  175 => 45,  169 => 42,  166 => 41,  164 => 40,  159 => 38,  155 => 36,  149 => 35,  129 => 30,  127 => 29,  125 => 28,  108 => 27,  104 => 25,  89 => 24,  87 => 23,  85 => 22,  68 => 21,  62 => 19,  54 => 14,  52 => 13,  49 => 11,  43 => 10,  36 => 1,  33 => 5,  30 => 4,  11 => 1,);
+        return array (  178 => 46,  175 => 45,  169 => 42,  166 => 41,  164 => 40,  159 => 38,  155 => 36,  149 => 35,  129 => 30,  127 => 29,  125 => 28,  108 => 27,  104 => 25,  89 => 24,  87 => 23,  85 => 22,  68 => 21,  62 => 19,  54 => 14,  52 => 13,  49 => 11,  43 => 10,  36 => 1,  33 => 5,  30 => 4,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -261,7 +258,7 @@ class __TwigTemplate_4b91d9a5345bdda2f2db0f5f360a0761368469a8190c26d09970cc4e06d
         {% endif %}
         <div class=\"panel-body text-center\">
             <a class=\"btn btn-primary\" href=\"{{ item.contenttype.slug ~ '/' ~ item.slug }}\">
-                {{ item.contenttype.name ~ ' ' ~ item.name }}
+                Ga naar dit onderdeel
             </a>
         </div>
     </div>

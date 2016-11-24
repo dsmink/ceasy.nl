@@ -23,7 +23,7 @@ categories:
     singular_slug: category
     behaves_like: categories
     multiple: true
-    options: [ splash ]
+    options: { 'splash' : "Splash", 'contact-ziekteverzuim' : "Contact ziekteverzuim", 'contact-bemiddeling' : "Contact bemiddeling" }
     
 forms:
     name: Forms

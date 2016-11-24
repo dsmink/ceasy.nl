@@ -22,20 +22,20 @@ class __TwigTemplate_354d7316cdefe90bd902b2f2ad9de863f49197c251905b5721de6b2d48a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_805619afb37eb571b7f547792038ff7238695b695601980d5ae751fa39b482e0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_805619afb37eb571b7f547792038ff7238695b695601980d5ae751fa39b482e0->enter($__internal_805619afb37eb571b7f547792038ff7238695b695601980d5ae751fa39b482e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ziekteverzuim.twig"));
+        $__internal_1f91f097711beaedaa1718da8e13510baf274263c1673b010369e190d3cdbabf = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1f91f097711beaedaa1718da8e13510baf274263c1673b010369e190d3cdbabf->enter($__internal_1f91f097711beaedaa1718da8e13510baf274263c1673b010369e190d3cdbabf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ziekteverzuim.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_805619afb37eb571b7f547792038ff7238695b695601980d5ae751fa39b482e0->leave($__internal_805619afb37eb571b7f547792038ff7238695b695601980d5ae751fa39b482e0_prof);
+        $__internal_1f91f097711beaedaa1718da8e13510baf274263c1673b010369e190d3cdbabf->leave($__internal_1f91f097711beaedaa1718da8e13510baf274263c1673b010369e190d3cdbabf_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_058a677a5a48a6cb7aa670bb2fc041b3aa5ebeb755269d763255b8ab9adb71a2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_058a677a5a48a6cb7aa670bb2fc041b3aa5ebeb755269d763255b8ab9adb71a2->enter($__internal_058a677a5a48a6cb7aa670bb2fc041b3aa5ebeb755269d763255b8ab9adb71a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_477b272cceabc43759ae7fe24489c2df6821442889d2e30c9e743ada01148c30 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_477b272cceabc43759ae7fe24489c2df6821442889d2e30c9e743ada01148c30->enter($__internal_477b272cceabc43759ae7fe24489c2df6821442889d2e30c9e743ada01148c30_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 5
         echo "    ";
@@ -43,20 +43,20 @@ class __TwigTemplate_354d7316cdefe90bd902b2f2ad9de863f49197c251905b5721de6b2d48a
         echo " | Ziekteverzuim
 ";
         
-        $__internal_058a677a5a48a6cb7aa670bb2fc041b3aa5ebeb755269d763255b8ab9adb71a2->leave($__internal_058a677a5a48a6cb7aa670bb2fc041b3aa5ebeb755269d763255b8ab9adb71a2_prof);
+        $__internal_477b272cceabc43759ae7fe24489c2df6821442889d2e30c9e743ada01148c30->leave($__internal_477b272cceabc43759ae7fe24489c2df6821442889d2e30c9e743ada01148c30_prof);
 
     }
 
     // line 9
     public function block_secondary($context, array $blocks = array())
     {
-        $__internal_b549dc9d8d8889fdbac734a2c4de784f0e409cfb8cae83f5c2aef24399e69465 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b549dc9d8d8889fdbac734a2c4de784f0e409cfb8cae83f5c2aef24399e69465->enter($__internal_b549dc9d8d8889fdbac734a2c4de784f0e409cfb8cae83f5c2aef24399e69465_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "secondary"));
+        $__internal_2d128f053c37b9335daed5fa76d004ac83a007b985b117c3bc8ed874b42d6289 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2d128f053c37b9335daed5fa76d004ac83a007b985b117c3bc8ed874b42d6289->enter($__internal_2d128f053c37b9335daed5fa76d004ac83a007b985b117c3bc8ed874b42d6289_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "secondary"));
 
         // line 10
         echo "    ";
         $template_storage = $context['app']['storage'];
-        $context['links'] =         $template_storage->getContent("blocks/handige-links-ziekteverzuim", array() );
+        $context['contact'] =         $template_storage->getContent("blocks/contact-gegevens-ziekteverzuim", array() );
         // line 11
         echo "    ";
         $template_storage = $context['app']['storage'];
@@ -65,10 +65,10 @@ class __TwigTemplate_354d7316cdefe90bd902b2f2ad9de863f49197c251905b5721de6b2d48a
         echo "    <aside id=\"\" class=\"widget\">
         <h3 class=\"widget-title\">";
         // line 13
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["links"]) ? $context["links"] : $this->getContext($context, "links")), "title", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : $this->getContext($context, "contact")), "title", array()), "html", null, true);
         echo "</h3>";
         // line 14
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["links"]) ? $context["links"] : $this->getContext($context, "links")), "content", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : $this->getContext($context, "contact")), "content", array()), "html", null, true);
         // line 15
         echo "</aside>
     <aside id=\"\" class=\"widget\">
@@ -82,7 +82,7 @@ class __TwigTemplate_354d7316cdefe90bd902b2f2ad9de863f49197c251905b5721de6b2d48a
         echo "</aside>
 ";
         
-        $__internal_b549dc9d8d8889fdbac734a2c4de784f0e409cfb8cae83f5c2aef24399e69465->leave($__internal_b549dc9d8d8889fdbac734a2c4de784f0e409cfb8cae83f5c2aef24399e69465_prof);
+        $__internal_2d128f053c37b9335daed5fa76d004ac83a007b985b117c3bc8ed874b42d6289->leave($__internal_2d128f053c37b9335daed5fa76d004ac83a007b985b117c3bc8ed874b42d6289_prof);
 
     }
 
@@ -120,11 +120,11 @@ class __TwigTemplate_354d7316cdefe90bd902b2f2ad9de863f49197c251905b5721de6b2d48a
 
 {# Secondary #}
 {% block secondary %}
-    {% setcontent links = 'blocks/handige-links-ziekteverzuim' %}
+    {% setcontent contact = 'blocks/contact-gegevens-ziekteverzuim' %}
     {% setcontent social = 'blocks/volg-ons-op-social-media' %}
     <aside id=\"\" class=\"widget\">
-        <h3 class=\"widget-title\">{{ links.title }}</h3>
-        {{- links.content -}}
+        <h3 class=\"widget-title\">{{ contact.title }}</h3>
+        {{- contact.content -}}
     </aside>
     <aside id=\"\" class=\"widget\">
         <h3 class=\"widget-title\">{{ social.title }}</h3>

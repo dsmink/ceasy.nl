@@ -7,11 +7,11 @@
 
 {# Secondary #}
 {% block secondary %}
-    {% setcontent links = 'blocks/handige-links-ziekteverzuim' %}
+    {% setcontent contact = 'blocks/contact-gegevens-ziekteverzuim' %}
     {% setcontent social = 'blocks/volg-ons-op-social-media' %}
     <aside id="" class="widget">
-        <h3 class="widget-title">{{ links.title }}</h3>
-        {{- links.content -}}
+        <h3 class="widget-title">{{ contact.title }}</h3>
+        {{- contact.content -}}
     </aside>
     <aside id="" class="widget">
         <h3 class="widget-title">{{ social.title }}</h3>

@@ -22,20 +22,20 @@ class __TwigTemplate_d075939768d20cc3b83298c2b98dbb57315e194f28f0e6a12df3c6d9abd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a997b90307bc4d100b56ead635a945ff9d975f7af02a31270269f43606efedff = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a997b90307bc4d100b56ead635a945ff9d975f7af02a31270269f43606efedff->enter($__internal_a997b90307bc4d100b56ead635a945ff9d975f7af02a31270269f43606efedff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "bemiddeling.twig"));
+        $__internal_6009bf2c55461228580609d41670cc9b9e5f00a5344e618398d3edbfc6f8f3ea = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6009bf2c55461228580609d41670cc9b9e5f00a5344e618398d3edbfc6f8f3ea->enter($__internal_6009bf2c55461228580609d41670cc9b9e5f00a5344e618398d3edbfc6f8f3ea_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "bemiddeling.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a997b90307bc4d100b56ead635a945ff9d975f7af02a31270269f43606efedff->leave($__internal_a997b90307bc4d100b56ead635a945ff9d975f7af02a31270269f43606efedff_prof);
+        $__internal_6009bf2c55461228580609d41670cc9b9e5f00a5344e618398d3edbfc6f8f3ea->leave($__internal_6009bf2c55461228580609d41670cc9b9e5f00a5344e618398d3edbfc6f8f3ea_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_415991a0e4b95089cd2be32dbe62f22ddc29f44e530b984b25ae3938bd12a868 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_415991a0e4b95089cd2be32dbe62f22ddc29f44e530b984b25ae3938bd12a868->enter($__internal_415991a0e4b95089cd2be32dbe62f22ddc29f44e530b984b25ae3938bd12a868_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_914334085d9896ac9d4486a59186fc96674b390ee586c1ada40c72956fc21758 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_914334085d9896ac9d4486a59186fc96674b390ee586c1ada40c72956fc21758->enter($__internal_914334085d9896ac9d4486a59186fc96674b390ee586c1ada40c72956fc21758_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         // line 5
         echo "    ";
@@ -43,20 +43,20 @@ class __TwigTemplate_d075939768d20cc3b83298c2b98dbb57315e194f28f0e6a12df3c6d9abd
         echo " | Bemiddeling
 ";
         
-        $__internal_415991a0e4b95089cd2be32dbe62f22ddc29f44e530b984b25ae3938bd12a868->leave($__internal_415991a0e4b95089cd2be32dbe62f22ddc29f44e530b984b25ae3938bd12a868_prof);
+        $__internal_914334085d9896ac9d4486a59186fc96674b390ee586c1ada40c72956fc21758->leave($__internal_914334085d9896ac9d4486a59186fc96674b390ee586c1ada40c72956fc21758_prof);
 
     }
 
     // line 9
     public function block_secondary($context, array $blocks = array())
     {
-        $__internal_085e4318d2f85b3518506fc4f126257acfe3237ac0dffc96499acf02e5e02ad9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_085e4318d2f85b3518506fc4f126257acfe3237ac0dffc96499acf02e5e02ad9->enter($__internal_085e4318d2f85b3518506fc4f126257acfe3237ac0dffc96499acf02e5e02ad9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "secondary"));
+        $__internal_f28e4554eddee84553019a03a0d7062c5adb47e7016f846615e0684cacff8245 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f28e4554eddee84553019a03a0d7062c5adb47e7016f846615e0684cacff8245->enter($__internal_f28e4554eddee84553019a03a0d7062c5adb47e7016f846615e0684cacff8245_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "secondary"));
 
         // line 10
         echo "    ";
         $template_storage = $context['app']['storage'];
-        $context['links'] =         $template_storage->getContent("blocks/handige-links-bemiddeling", array() );
+        $context['contact'] =         $template_storage->getContent("blocks/contact-gegevens-bemiddeling", array() );
         // line 11
         echo "    ";
         $template_storage = $context['app']['storage'];
@@ -65,10 +65,10 @@ class __TwigTemplate_d075939768d20cc3b83298c2b98dbb57315e194f28f0e6a12df3c6d9abd
         echo "    <aside id=\"\" class=\"widget\">
         <h3 class=\"widget-title\">";
         // line 13
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["links"]) ? $context["links"] : $this->getContext($context, "links")), "title", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : $this->getContext($context, "contact")), "title", array()), "html", null, true);
         echo "</h3>";
         // line 14
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["links"]) ? $context["links"] : $this->getContext($context, "links")), "content", array()), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["contact"]) ? $context["contact"] : $this->getContext($context, "contact")), "content", array()), "html", null, true);
         // line 15
         echo "</aside>
     <aside id=\"\" class=\"widget\">
@@ -82,7 +82,7 @@ class __TwigTemplate_d075939768d20cc3b83298c2b98dbb57315e194f28f0e6a12df3c6d9abd
         echo "</aside>
 ";
         
-        $__internal_085e4318d2f85b3518506fc4f126257acfe3237ac0dffc96499acf02e5e02ad9->leave($__internal_085e4318d2f85b3518506fc4f126257acfe3237ac0dffc96499acf02e5e02ad9_prof);
+        $__internal_f28e4554eddee84553019a03a0d7062c5adb47e7016f846615e0684cacff8245->leave($__internal_f28e4554eddee84553019a03a0d7062c5adb47e7016f846615e0684cacff8245_prof);
 
     }
 
@@ -120,11 +120,11 @@ class __TwigTemplate_d075939768d20cc3b83298c2b98dbb57315e194f28f0e6a12df3c6d9abd
 
 {# Secondary #}
 {% block secondary %}
-    {% setcontent links = 'blocks/handige-links-bemiddeling' %}
+    {% setcontent contact = 'blocks/contact-gegevens-bemiddeling' %}
     {% setcontent social = 'blocks/volg-ons-op-social-media' %}
     <aside id=\"\" class=\"widget\">
-        <h3 class=\"widget-title\">{{ links.title }}</h3>
-        {{- links.content -}}
+        <h3 class=\"widget-title\">{{ contact.title }}</h3>
+        {{- contact.content -}}
     </aside>
     <aside id=\"\" class=\"widget\">
         <h3 class=\"widget-title\">{{ social.title }}</h3>

@@ -266,7 +266,9 @@
             "behaves_like": "categories",
             "multiple": true,
             "options": {
-                "splash": "splash"
+                "splash": "Splash",
+                "contact-ziekteverzuim": "Contact ziekteverzuim",
+                "contact-bemiddeling": "Contact bemiddeling"
             },
             "has_sortorder": false,
             "allow_spaces": false
