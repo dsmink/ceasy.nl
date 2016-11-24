@@ -1,0 +1,29 @@
+{
+    "bacboslab/menueditor": {
+        "name": "bacboslab/menueditor",
+        "type": "composer",
+        "path": "vendor/bacboslab/menueditor",
+        "webPath": "extensions/vendor/bacboslab/menueditor/web",
+        "class": "Bolt\\Extension\\Bacboslab\\Menueditor\\MenueditorExtension",
+        "constraint": "^3.1",
+        "valid": true
+    },
+    "bolt/boltforms": {
+        "name": "bolt/boltforms",
+        "type": "composer",
+        "path": "vendor/bolt/boltforms",
+        "webPath": "extensions/vendor/bolt/boltforms/web",
+        "class": "Bolt\\Extension\\Bolt\\BoltForms\\BoltFormsExtension",
+        "constraint": "^3.0",
+        "valid": true
+    },
+    "rossriley/formeditor": {
+        "name": "rossriley/formeditor",
+        "type": "composer",
+        "path": "vendor/rossriley/formeditor",
+        "webPath": "extensions/vendor/rossriley/formeditor/assets",
+        "class": "Bolt\\Extensions\\Ross\\FormEditor\\Extension",
+        "constraint": ">3.0,<4.0",
+        "valid": true
+    }
+}

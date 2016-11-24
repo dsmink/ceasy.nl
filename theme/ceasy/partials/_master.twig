@@ -1,0 +1,76 @@
+{% spaceless -%}<!DOCTYPE html>
+<!--[if IE 8]>
+    <html class="no-js" id="ie8" lang="{{- htmllang() -}}">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+    <html class="no-js" lang="{{- htmllang() -}}">
+<!--<![endif]-->
+<html class="no-js" lang="{{- htmllang() -}}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="generator" content="{{ 'Bolt CM ' ~ bolt_version }}">
+        <title>{%- block title %}Bemiddeling in ziekteverzuim{% endblock title -%} | CEasy</title>
+        <link rel="dns-prefetch' href='//fonts.googleapis.com" />
+        <link rel="dns-prefetch' href='//maxcdn.bootstrapcdn.com" />
+        {%- block stylesheets -%}
+            {# Latest compiled and minified CSS #}
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            {# Google Font #}
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+            {# Custom #}
+            <link href="{{ asset( 'css/style.min.css', 'theme') }}" rel="stylesheet">
+        {%- endblock stylesheets -%}
+        {%- include( 'partials/_favicon.twig' ) -%}
+    </head>
+    <body class="home page page-template-default custom-background">
+        <div id="page" class="hfeed site">
+
+            {# Header content #}
+            {%- block header -%}
+                <header id="masthead" role="banner">
+                    {{- include( 'partials/_header.twig' ) -}}
+                </header>
+            {%- endblock header -%}
+
+            {# Body #}
+            <div id="content" class="site-content">
+		        <div class="container">
+                    <div class="row">
+                        {%- block body -%}
+                            <div id="primary" class="col-md-9 content-area">
+                                <main id="main" class="site-main" role="main">
+                                    {{- block( 'primary' ) -}}
+                                </main>
+                            </div>
+                            <div id="secondary" class="col-md-3 sidebar widget-area" role="complementary">
+                                {{- block( 'secondary' ) -}}
+                            </div>
+                        {%- endblock body -%}
+                    </div>
+                </div>
+            </div>
+
+            {# Footer content #}
+            {%- block footer -%}
+                <footer id="colophon" class="site-footer" role="contentinfo">
+                    {{- include( 'partials/_footer.twig' ) -}}
+                </footer>
+            {%- endblock footer -%}
+        </div>
+
+        {# Scripts #}
+        {%- block javascripts -%}
+            {# jQuery #}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            {# Latest compiled and minified JavaScript #}
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
+            {# My scripts #}
+            <script src="{{ asset( '/js/main.min.js', 'theme' ) }}" async></script>
+            {# Social media #}
+            <script type="text/javascript">var switchTo5x=true;</script>
+            <script type="text/javascript" async id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=349a7359-9428-4fb4-bec9-fabfc97cb3ad"></script>
+            <script type="text/javascript">stLight.options({publisher: "349a7359-9428-4fb4-bec9-fabfc97cb3ad", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        {%- endblock javascripts -%}
+    </body>
+</html>{%- endspaceless %}

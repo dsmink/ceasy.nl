@@ -1,0 +1,31 @@
+{
+    "name": "rossriley/formeditor",
+    "description": "An extension to Bolt Forms to provide a basic UI",
+    "type": "bolt-extension",
+    "require": {
+        "bolt/bolt": ">3.0,<4.0",
+        "bolt/boltforms": "^3.0"
+    },
+    "license": "MIT",
+    "authors": [{"name": "Ross Riley", "email": "riley.ross@gmail.com"}
+    ],
+    "keywords": [
+        "boltforms", "forms", "ui", "editor"
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extensions\\Ross\\FormEditor\\": "src",
+            "Bolt\\Extensions\\Ross\\FormEditor\\Tests\\": "tests"
+        }
+    },
+    
+    "extra": {
+        "bolt-assets": "assets",
+        "bolt-screenshots": [
+            "screenshot.png",
+            "screenshot2.png"
+        ],
+        "bolt-class": "Bolt\\Extensions\\Ross\\FormEditor\\Extension"
+    }
+}

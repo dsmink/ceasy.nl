@@ -1,0 +1,199 @@
+templates:
+    form: boltforms_form.twig
+    email: boltforms_email.twig
+    subject: boltforms_email_subject.twig
+    files: boltforms_file_browser.twig
+recaptcha:
+    enabled: false
+    label: 'Please enter the reCaptcha text to prove you''re a human'
+    public_key: ''
+    private_key: ''
+    error_message: 'The CAPTCHA wasn''t entered correctly. Please try again.'
+    theme: clean
+csrf: true
+uploads:
+    enabled: false
+    base_directory: /full/path/for/uploaded/files/
+    filename_handling: suffix
+    management_controller: false
+debug:
+    enabled: false
+    address: d.smink@gmail.com
+contact:
+    notification:
+        enabled: true
+        debug: false
+        subject: 'Your message was submitted'
+        from_name: Dennis Smink
+        from_email: d.smink@gmail.com
+        replyto_name: Dennis Smink
+        replyto_email: d.smink@gmail.com
+        to_name: 'Dennis Smink'
+        to_email: d.smink@gmail.com
+        cc_name: 'Info Person'
+        cc_email: info@example.com
+        bcc_name: 'Manager Person'
+        bcc_email: manager@example.com
+        attach_files: false
+    feedback:
+        success: 'Message submission successful'
+        error: 'There are errors in the form, please fix before trying to resubmit'
+    fields:
+        name:
+            type: text
+            options:
+                required: true
+                label: Name
+                attr:
+                    placeholder: 'Your name...'
+                constraints:
+                    - NotBlank
+                    -
+                        Length:
+                            min: 3
+        email:
+            type: text
+            options:
+                required: true
+                label: 'Email address'
+                attr:
+                    placeholder: 'Your email...'
+                constraints:
+                    - NotBlank
+                    - Email
+        message:
+            type: textarea
+            options:
+                required: true
+                label: 'Your message'
+                attr:
+                    placeholder: 'Your message...'
+                    class: myclass
+        needreply:
+            type: choice
+            options:
+                required: false
+                label: 'Do you want us to contact you back?'
+                choices:
+                    - 'Yes'
+                    - 'No'
+                multiple: false
+        submit:
+            type: submit
+            options:
+                label: 'Submit form'
+
+# Ziekteverzuim formulier
+ziekteverzuim:
+    notification:
+        enabled: true
+        debug: false
+        subject: 'Your message was submitted'
+        from_name: 'Dennis Smink'
+        from_email: d.smink@gmail.com
+        replyto_name: 'Dennis Smink'
+        replyto_email: d.smink@gmail.com
+        to_name: 'Dennis Smink'
+        to_email: d.smink@gmail.com
+        cc_name: 'Info Person'
+        cc_email: info@example.com
+        bcc_name: 'Manager Person'
+        bcc_email: manager@example.com
+        attach_files: false
+    feedback:
+        success: 'Bedankt voor uw bericht. Indien gewenst nemen wij zo spoedig mogelijk contact met u op.'
+        error: 'U heeft niet alle velden correct ingevuld.'
+    database:
+        contenttype: ziekteverzuim_contact
+    fields:
+        name:
+            type: text
+            options:
+                required: true
+                label: 'Uw naam'
+                attr:
+                    placeholder: 'Jan Jansen'
+                constraints:
+                    - NotBlank
+                    -
+                        Length:
+                            min: 3
+        emailaddress:
+            type: text
+            options:
+                required: true
+                label: 'E-mailadres'
+                attr:
+                    placeholder: 'jan@jansen.com'
+                constraints:
+                    - NotBlank
+                    - Email
+        message:
+            type: textarea
+            options:
+                required: true
+                label: 'Uw bericht'
+                attr:
+                    class: myclass
+        submit:
+            type: submit
+            options:
+                label: 'Versturen'
+
+
+# Bemiddeling formulier
+bemiddeling:
+    notification:
+        enabled: true
+        debug: false
+        subject: 'Your message was submitted'
+        from_name: 'Dennis Smink'
+        from_email: d.smink@gmail.com
+        replyto_name: 'Dennis Smink'
+        replyto_email: d.smink@gmail.com
+        to_name: 'Dennis Smink'
+        to_email: d.smink@gmail.com
+        cc_name: 'Info Person'
+        cc_email: info@example.com
+        bcc_name: 'Manager Person'
+        bcc_email: manager@example.com
+        attach_files: false
+    feedback:
+        success: 'Bedankt voor uw bericht. Indien gewenst nemen wij zo spoedig mogelijk contact met u op.'
+        error: 'U heeft niet alle velden correct ingevuld.'
+    database:
+        contenttype: bemiddeling_contact
+    fields:
+        name:
+            type: text
+            options:
+                required: true
+                label: 'Uw naam'
+                attr:
+                    placeholder: 'Jan Jansen'
+                constraints:
+                    - NotBlank
+                    -
+                        Length:
+                            min: 3
+        emailaddress:
+            type: text
+            options:
+                required: true
+                label: 'E-mailadres'
+                attr:
+                    placeholder: 'jan@jansen.com'
+                constraints:
+                    - NotBlank
+                    - Email
+        message:
+            type: textarea
+            options:
+                required: true
+                label: 'Uw bericht'
+                attr:
+                    class: myclass
+        submit:
+            type: submit
+            options:
+                label: 'Versturen'

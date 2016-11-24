@@ -1,0 +1,49 @@
+{% extends 'partials/_master.twig' %}
+
+{# Page title #}
+{% block title %}
+    {{ record.title }}
+{% endblock title %}
+
+{# Primary #}
+{% block primary %}
+    <article class="post-content post-2 page type-page status-publish hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">{{ record.title }}</h1>
+            <div class="entry-meta"></div>
+        </header>
+        <div class="entry-content">
+            {% if record.teaser|length %}
+                <strong>
+                    {{- record.teaser -}}
+                </strong>
+            {% endif %}
+        </div>
+        <div class="entry-content">
+            {{- record.body -}}
+        </div>
+        {% if record.taxonomy.forms is defined %}
+            {% for name,form in record.taxonomy.forms %}
+                {% set formname = name|replace({ '/forms/':'' }) %}
+                <div class="entry-content">
+                    {{- boltforms(formname) -}}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <footer class="entry-footer">{{- include( 'partials/_social.twig' ) -}}</footer>
+    </article>
+{% endblock primary %}
+
+{# Secondary #}
+{% block secondary %}
+    {% setcontent links = 'blocks/handige-links' %}
+    {% setcontent social = 'blocks/volg-ons-op-social-media' %}
+    <aside id="" class="widget">
+        <h3 class="widget-title">{{ links.title }}</h3>
+        {{- links.content -}}
+    </aside>
+    <aside id="" class="widget">
+        <h3 class="widget-title">{{ social.title }}</h3>
+        {{- social.content -}}
+    </aside>
+{% endblock secondary %}

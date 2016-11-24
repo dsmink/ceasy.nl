@@ -1,0 +1,20 @@
+{% extends 'page.twig' %}
+
+{# Page title #}
+{% block title %}
+    {{ record.title }} | Ziekteverzuim
+{% endblock title %}
+
+{# Secondary #}
+{% block secondary %}
+    {% setcontent links = 'blocks/handige-links-ziekteverzuim' %}
+    {% setcontent social = 'blocks/volg-ons-op-social-media' %}
+    <aside id="" class="widget">
+        <h3 class="widget-title">{{ links.title }}</h3>
+        {{- links.content -}}
+    </aside>
+    <aside id="" class="widget">
+        <h3 class="widget-title">{{ social.title }}</h3>
+        {{- social.content -}}
+    </aside>
+{% endblock secondary %}

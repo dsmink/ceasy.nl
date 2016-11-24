@@ -1,0 +1,14 @@
+main:
+    -
+        label: Ziekteverzuim
+        link: /ziekteverzuim/info
+        submenu:
+            -
+                link: /ziekteverzuim/preventie
+                label: Preventie
+            -
+                link: /ziekteverzuim/coaching
+                label: Coaching
+    -
+        link: /bemiddeling/info
+        label: Bemiddeling

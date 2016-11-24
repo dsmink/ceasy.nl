@@ -1,0 +1,31 @@
+{% extends '/page.twig' %}
+
+{# Set content #}
+{% setcontent block = '/block/wij-zijn-er-even-niet' %}
+{% setcontent social = 'blocks/volg-ons-op-social-media' %}
+
+{% block title %}
+    {{ block.title }}
+{% endblock title %}
+
+{# Primary #}
+{% block primary %}
+    <article class="post-content post-2 page type-page status-publish hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">{{ block.title }}</h1>
+            <div class="entry-meta"></div>
+        </header>
+        <div class="entry-content">
+            {{- block.content -}}
+        </div>
+        <footer class="entry-footer">{{- include( 'partials/_social.twig' ) -}}</footer>
+    </article>
+{% endblock primary %}
+
+{# Secondary #}
+{% block secondary %}
+    <aside id="" class="widget">
+        <h3 class="widget-title">{{ social.title }}</h3>
+        {{- social.content -}}
+    </aside>
+{% endblock secondary %}
