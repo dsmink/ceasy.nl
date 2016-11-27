@@ -1711,3 +1711,40 @@ a:active,
  * Social media addition
  */
 aside.social{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}aside.social *{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}
+
+
+/**
+ * Boltforms desktop
+ */ 
+ @media (min-width: 901px) {
+     .boltform .boltforms-row {
+         margin-bottom: 5px;
+     }
+     .boltform .boltforms-label {
+         display: block;
+         float: left;
+         width: 150px;
+     }
+     .boltform .boltforms-label label {
+         margin-top: 5px;
+     }
+     .boltform textarea {
+         min-height: 200px;
+         width: 100%;
+     }
+ }
+
+ ul.boltform-error {
+     float: left;
+     padding-left: 0;
+     width: 100%;
+ }
+ li.boltform-error {
+     border-left: 3px solid #994c92;
+     color: #994c92;
+     display: block;
+     float: left;
+     list-style: none;
+     margin-bottom: 5px;
+     padding-left: 5px;
+ }
