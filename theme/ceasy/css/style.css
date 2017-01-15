@@ -40,7 +40,9 @@ This theme is licensed under the GPL.
  * 1.0 Reset
   * -----------------------------------------------------------------------------
  */
-
+html {
+    background: #222;
+}
 
 body {
     background: #eceff1;
@@ -67,7 +69,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p{
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     line-height: 1.7em;
 }
 
@@ -420,6 +422,10 @@ a img.aligncenter {
     height: auto;
 }
 
+.entry-content + .entry-content {
+    margin-top: -20px;
+}
+
 .entry-content img,
 .comment-content img,
 .widget img {
@@ -627,13 +633,21 @@ color: #000000;
  * ----------------------------------------------------------------------------
  */
 
+.site-header {
+    background: url('/theme/ceasy/img/banner.jpg'), #994c92;
+    background-blend-mode: hard-light;
+    background-position: 0 -220px;
+    background-size: 100% auto;
+    opacity: .75;
+}
+
 .site-header{
-    background: #b0bec5;
+    /*background: #b0bec5;*/
     position: relative;
     width: 100%;
     margin-bottom: 3em;
     overflow: hidden;
-    min-height: 200px;
+    min-height: 300px;
 }
 
 .site-header .site-branding {
@@ -646,6 +660,34 @@ color: #000000;
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     text-align: center;  
+}
+
+.site-header__info {
+    border: 0;
+    font-size: .9em;
+    margin: 20px;
+    opacity: .75;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.site-header__info ul {
+    padding: 0 0 0 15px;
+}
+.site-header__info__title {
+    background-color: #994c92 !important;
+    color: white !important;
+    font-weight: 700;
+}
+.site-header__info__content {
+    font-size: 0.85em;
+}
+
+@media (min-width: 767px) {
+    .site-header__content {
+        font-size: .8em;
+    }
 }
 
 .site-title {
@@ -1149,7 +1191,6 @@ color: #000000;
     text-transform: uppercase;
 }
 
-
 #secondary .widget-title::after{
     content: "";
     position: absolute;
@@ -1161,6 +1202,10 @@ color: #000000;
 
 #secondary .widget a{
     color: #727272;
+}
+
+#secondary .widget ul{
+    padding-left: 0;
 }
 
 #secondary .widget .widget-title .rsswidget{
@@ -1402,12 +1447,22 @@ color: #000000;
         border-top: none;
     }    
 }
+@media (max-width: 320px) {
+    .site-header {
+        height: 280px;
+    }
+}
 @media (max-width: 359px) {
     .site-header{
+        background-position: 0 0;
         position: relative;
         width: 100%;
         min-height: 100px;
         margin-bottom: 1.5em;
+    }
+
+    .site-header__info {
+        display: none;
     }
 
     .site-title {
@@ -1446,10 +1501,6 @@ color: #000000;
     
     .site {
         max-width: 98%;
-    }
-
-    .site-header {
-        background-image: none !important;
     }
 
     .site-header .home-link {
@@ -1543,10 +1594,10 @@ color: #000000;
  */ 
 /*.site-header { background: #994c92; }*/
 .site-header {
-background: #994c92;
+/*background: #994c92;*/
 /*background-size: 1600px auto;*/
 /*height: 761px;*/
-}                                }
+}                               }
 @media (min-width: 768px) and (max-width: 1024px){
     .site-header {
         background-size: 1024px auto;
@@ -1556,21 +1607,24 @@ background: #994c92;
 @media (max-width: 767px) {
     .site-header {
         background-size: 768px auto;
+        background-position: 0 0;
         height: 365.28px;                
     }
 }
 @media (max-width: 359px) {
     .site-header {
-        background-size: 768px auto;
+        background-size: 100% auto;
+        /*background-size: 768px auto;*/
+        background-position: 0 0;
         height: 171.225px;                      
     }   
 }
-.site-header{
+/*.site-header{
     -webkit-box-shadow: 0px 0px 2px 1px rgba(182,182,182,0.3);
     -moz-box-shadow: 0px 0px 2px 1px rgba(182,182,182,0.3);
     -o-box-shadow: 0px 0px 2px 1px rgba(182,182,182,0.3);
     box-shadow: 0px 0px 2px 1px rgba(182,182,182,0.3);
-}
+}*/
 .site-title,
 .site-description {
     position: absolute;
@@ -1710,7 +1764,7 @@ a:active,
 /**
  * Social media addition
  */
-aside.social{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}aside.social *{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}
+aside.social{margin-top:10px;-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}aside.social *{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important}
 
 
 /**

@@ -1,3 +1,6 @@
+{% setcontent whyBlock = 'blocks/waarom-ceasy' %}
+
+{% spaceless %}
 <nav class="navbar navbar-default navbar-fixed-top navbar-left" role="navigation"> 
     {# Brand and toggle get grouped for better mobile display #}
     <div class="container" id="navigation_menu">
@@ -9,18 +12,15 @@
                 <span class="icon-bar"></span> 
             </button> 
             <a class="navbar-brand" href="{{ paths.hosturl }}" style="display: inline-block">
-                <img alt="Het CEasy logo" src="{{ asset( '/img/favicon/apple-icon-57x57.png', 'theme' ) }}" height="32" width="32"/>
+                <img alt="Het CEasy logo" src="{{ asset( '/img/favicon/apple-touch-icon-57x57.png', 'theme' ) }}" height="32" width="32"/>
                 <span class="pull-left h2">{{- app.config.get('general/sitename') -}}</span>
-                <style scoped>
-                    img { float: left }
-                    .h2 { margin: 0 0 0 10px; text-transform: initial; }
-                </style>
+                <style scoped>img { float: left } .h2 { margin: 0 0 0 10px; text-transform: initial }</style>
             </a>
         </div> 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            {% block main_menu %}
+            {%- block main_menu %}
                 {{- menu('main', 'partials/_main_menu.twig') -}}
-            {% endblock main_menu %}
+            {% endblock main_menu -%}
         </div>        
     </div>
 </nav>
@@ -28,6 +28,23 @@
 <div id="cc_spacer" style="height: 50px;"></div>
 
 <div class="site-header">
+
+    {# Waarom CEasy? #}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="site-header__info">
+                    <div class="panel panel-default .site-header__info">
+                        <div class="panel-heading site-header__info__title">{{ whyBlock.title }}</div>
+                        <div class="panel-body site-header__info__content">
+                            {{- whyBlock.content -}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="site-branding">
         {% block site_branding %}
             <a class="home-link" href="#" title="CEasy" rel="home">
@@ -37,3 +54,4 @@
         {% endblock site_branding %}
     </div>
 </div>
+{% endspaceless %}
