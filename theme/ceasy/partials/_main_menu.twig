@@ -1,6 +1,7 @@
 <ul id="menu-hoofd-menu" class="nav navbar-nav">
     {%- for item in menu -%}
     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown">
+        <span class="menu-item-toggle">+</span>
         <a title="{{- item.label }}" href="{{ item.link }}" data-toggle="dropdown" class="dropdown-toggle">
             {{- item.label }} <span class="caret"></span>
         </a>

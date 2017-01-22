@@ -69,3 +69,19 @@
 		}, false );
 	}
 })();
+
+// Smink Menu fixing
+(function($) {
+    $('.navbar-nav').on('click', '.menu-item-toggle', function() {
+
+		var $parentItem = $(this).parent('.menu-item');
+
+		setTimeout(function() {
+
+			
+			console.log($parentItem);
+			$parentItem.toggleClass('open');
+
+		}, 250);
+    });
+})(jQuery);
