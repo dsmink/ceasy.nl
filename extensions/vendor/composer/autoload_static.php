@@ -19,6 +19,7 @@ class ComposerStaticInit7bb0447cfa7e88b86be553256f368085
         array (
             'Bolt\\Extensions\\Ross\\FormEditor\\Tests\\' => 38,
             'Bolt\\Extensions\\Ross\\FormEditor\\' => 32,
+            'Bolt\\Extension\\Bolt\\Sitemap\\' => 28,
             'Bolt\\Extension\\Bolt\\BoltForms\\' => 30,
             'Bolt\\Extension\\Bacboslab\\Menueditor\\' => 36,
             'Bolt\\Composer\\EventListener\\' => 28,
@@ -41,6 +42,10 @@ class ComposerStaticInit7bb0447cfa7e88b86be553256f368085
         'Bolt\\Extensions\\Ross\\FormEditor\\' => 
         array (
             0 => __DIR__ . '/..' . '/rossriley/formeditor/src',
+        ),
+        'Bolt\\Extension\\Bolt\\Sitemap\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bolt/sitemap/src',
         ),
         'Bolt\\Extension\\Bolt\\BoltForms\\' => 
         array (

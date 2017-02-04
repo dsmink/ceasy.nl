@@ -35,6 +35,7 @@
     "require": {
         "bacboslab/menueditor": "^3.1",
         "bolt/boltforms": "^3.1",
+        "bolt/sitemap": "^2.0",
         "rossriley/formeditor": "^3.0",
         "wikimedia/composer-merge-plugin": "^1.3"
     },

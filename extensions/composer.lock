@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf890f962a3320d518bb8d7f6da0cd7c",
-    "content-hash": "457c969388e11ccf21de1afb166d63fb",
+    "hash": "08075dd30900548c916210b3a01ec8bf",
+    "content-hash": "d2370ebc6582e2b3b414ac56dbd3d898",
     "packages": [
         {
             "name": "bacboslab/menueditor",
@@ -141,6 +141,61 @@
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
             "time": "2016-10-31 11:22:11"
+        },
+        {
+            "name": "bolt/sitemap",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/Sitemap.git",
+                "reference": "9cf8008260989b68d85986156ecc681c56bd52c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/9cf8008260989b68d85986156ecc681c56bd52c4",
+                "reference": "9cf8008260989b68d85986156ecc681c56bd52c4",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "icon-sitemap.png",
+                "bolt-class": "Bolt\\Extension\\Bolt\\Sitemap\\SitemapExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\Sitemap\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                },
+                {
+                    "name": "Patrick van Kouteren",
+                    "email": "info@wedesignit.nl"
+                },
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "An extension to create XML sitemaps for your Bolt website.",
+            "keywords": [
+                "SEO",
+                "sitemap"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/Sitemap/tree/master",
+                "issues": "https://github.com/bolt/Sitemap/issues"
+            },
+            "time": "2016-05-28 11:47:51"
         },
         {
             "name": "rossriley/formeditor",
