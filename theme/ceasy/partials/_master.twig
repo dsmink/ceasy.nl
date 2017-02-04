@@ -7,6 +7,7 @@
 <!--<![endif]-->
 <html class="no-js" lang="{{- htmllang() -}}">
     <head>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MXDR3GP');</script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta name="generator" content="{{ 'Bolt CM ' ~ bolt_version }}">
@@ -15,15 +16,18 @@
         <link rel="dns-prefetch' href='//maxcdn.bootstrapcdn.com" />
         {%- block stylesheets -%}
             {# Latest compiled and minified CSS #}
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" async>
             {# Google Font #}
-            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet" async>
             {# Custom #}
-            <link href="{{ asset( 'css/style.min.css', 'theme') }}" rel="stylesheet">
+            <link href="{{ asset( 'css/style.min.css', 'theme') }}" rel="stylesheet" async>
         {%- endblock stylesheets -%}
-        {%- include( 'partials/_favicon.twig' ) -%}">
+        {%- include( 'partials/_favicon.twig' ) -%}
     </head>
     <body class="home page page-template-default custom-background">
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MXDR3GP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+            </noscript>
         <div id="page" class="hfeed site">
 
             {# Header content #}
