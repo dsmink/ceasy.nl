@@ -15,6 +15,17 @@
     </div>
 {%- endblock body %}
 
+{# Meta keywords #}
+{% block meta_keywords -%}
+    {{- app.config.get('general/keywords') -}}
+{%- endblock meta_keywords %}
+
+{# Meta description #}
+{% block meta_description %}
+    {{- app.config.get('general/payoff') -}}
+{%- endblock meta_description %}
+
+
 {# Primary #}
 {% block primary -%}
 

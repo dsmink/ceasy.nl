@@ -85,3 +85,12 @@
 		}, 250);
     });
 })(jQuery);
+
+// Nofollow
+(function($) {
+	$('.widget').each(function() {
+		$(this).find('a').each(function() {
+			$(this).prop('rel', 'nofollow');
+		});
+	});
+})(jQuery);

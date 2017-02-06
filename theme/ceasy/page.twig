@@ -5,6 +5,20 @@
     {{ record.title }}
 {% endblock title %}
 
+{# Meta keywords #}
+{% block meta_keywords -%}
+    {%- if record.keywords is defined -%}
+        {{- record.keywords -}}
+    {%- endif -%}
+{%- endblock meta_keywords %}
+
+{# Meta description #}
+{% block meta_description %}
+    {%- if record.description is defined -%}
+        {{- record.description -}}
+    {%- endif -%}
+{%- endblock meta_description %}
+
 {# Primary #}
 {% block primary %}
     <article class="post-content post-2 page type-page status-publish hentry">

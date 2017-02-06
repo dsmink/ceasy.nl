@@ -3,7 +3,7 @@
     <html class="no-js" id="ie8" lang="{{- htmllang() -}}">
 <![endif]-->
 <!--[if !(IE 8) ]><!-->
-    <html class="no-js" lang="{{- htmllang() -}}">
+    {#<html class="no-js" lang="{{- htmllang() -}}">#}
 <!--<![endif]-->
 <html class="no-js" lang="{{- htmllang() -}}">
     <head>
@@ -11,6 +11,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta name="generator" content="{{ 'Bolt CM ' ~ bolt_version }}">
+        <meta name="keywords" content="{{ block('meta_keywords') }}">
+        <meta name="description" content="{{ block('meta_description') }}">
+        <meta name="robots" content="index, follow">
         <title>{%- block title %}Bemiddeling in ziekteverzuim{% endblock title -%} | CEasy</title>
         <link rel="dns-prefetch' href='//fonts.googleapis.com" />
         <link rel="dns-prefetch' href='//maxcdn.bootstrapcdn.com" />
@@ -23,6 +26,8 @@
             <link href="{{ asset( 'css/style.min.css', 'theme') }}" rel="stylesheet" async>
         {%- endblock stylesheets -%}
         {%- include( 'partials/_favicon.twig' ) -%}
+        {%- block headincludes -%}
+        {%- endblock headincludes -%}
     </head>
     <body class="home page page-template-default custom-background">
         <noscript>
@@ -68,12 +73,12 @@
             {# jQuery #}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
             {# Latest compiled and minified JavaScript #}
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
             {# My scripts #}
-            <script src="{{ asset( '/js/main.min.js', 'theme' ) }}" async></script>
+            <script src="{{ asset( '/js/main.min.js', 'theme' ) }}"></script>
             {# Social media #}
             <script type="text/javascript">var switchTo5x=true;</script>
-            <script type="text/javascript" async id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=349a7359-9428-4fb4-bec9-fabfc97cb3ad"></script>
+            <script type="text/javascript" async id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=349a7359-9428-4fb4-bec9-fabfc97cb3ad" async></script>
             <script type="text/javascript">window.onload = function(){ stLight.options({publisher: "349a7359-9428-4fb4-bec9-fabfc97cb3ad", doNotHash: false, doNotCopy: false, hashAddressBar: false});}</script>
         {%- endblock javascripts -%}
     </body>
