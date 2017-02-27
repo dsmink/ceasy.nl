@@ -1,0 +1,62 @@
+{% extends 'partials/_master.twig' %}
+
+{# Set Content #}
+{%- setcontent itemsZ = 'ziekteverzuim' where { categories : 'splash' } limit 1 -%}
+{%- setcontent itemsB = 'bemiddeling' where { categories : 'splash' } limit 1 -%}
+
+{#where { categories = 'splash'}#}
+
+{# Body #}
+{% block body -%}
+    <div id="primary" class="col-md-12 content-area">
+        <main id="main" class="site-main" role="main">
+            {{- block( 'primary' ) -}}
+        </main>
+    </div>
+{%- endblock body %}
+
+{# Meta keywords #}
+{% block meta_keywords -%}
+    {{- app.config.get('general/keywords') -}}
+{%- endblock meta_keywords %}
+
+{# Meta description #}
+{% block meta_description %}
+    {{- app.config.get('general/payoff') -}}
+{%- endblock meta_description %}
+
+
+{# Primary #}
+{% block primary -%}
+
+    {% for item in itemsZ %}
+        <div class="col-sm-6 col-xs-12">
+            {{- block( 'splashitem' ) -}}
+        </div>
+    {% endfor %} 
+
+    {% for item in itemsB %}
+        <div class="col-sm-6 col-xs-12">
+            {{- block( 'splashitem' ) -}}
+        </div>
+    {% endfor %}
+{%- endblock primary %}
+
+{# Splashitem #}
+{% block splashitem %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title text-center">{{- item.title -}}</h3>
+        </div>
+        {% if item.image is defined %}
+            <div class="panel-body text-center">
+                <img src="{{- thumbnail(item.image, 250, 250) -}}" style="display:inline-block; float: none;">
+            </div>
+        {% endif %}
+        <div class="panel-body text-center">
+            <a class="btn btn-primary" href="{{ item.contenttype.slug ~ '/' ~ item.slug }}">
+                Ga naar dit onderdeel
+            </a>
+        </div>
+    </div>
+{% endblock splashitem %}

@@ -1,61 +1,134 @@
 {% extends 'partials/_master.twig' %}
 
-{# Page title #}
-{% block title %}
-    {{ record.title }}
-{% endblock title %}
+{# Set Content #}
+{%- setcontent largeBlocks = 'ziekteverzuim' where { homepage_blocks : 'large' } limit 1 -%}
+{%- setcontent smallBlocks = 'ziekteverzuim' where { homepage_blocks : 'small' } -%}
+
+{# Body #}
+{% block body -%}
+    <div id="primary" class="col-md-12 content-area">
+        <main id="main" class="site-main" role="main">
+            {{- block( 'content' ) -}}
+        </main>
+    </div>
+{%- endblock body %}
 
 {# Meta keywords #}
 {% block meta_keywords -%}
-    {%- if record.keywords is defined -%}
-        {{- record.keywords -}}
-    {%- endif -%}
+    {{- app.config.get('general/keywords') -}}
 {%- endblock meta_keywords %}
 
 {# Meta description #}
 {% block meta_description %}
-    {%- if record.description is defined -%}
-        {{- record.description -}}
-    {%- endif -%}
+    {{- app.config.get('general/payoff') -}}
 {%- endblock meta_description %}
 
 {# Primary #}
-{% block primary %}
-    <article class="post-content post-2 page type-page status-publish hentry">
-        <header class="entry-header">
-            <h1 class="entry-title">{{ record.title }}</h1>
-            <div class="entry-meta"></div>
-        </header>
-        <div class="entry-content">
-            {% if record.teaser|length %}
-                {{- record.teaser -}}
-            {% endif %}
-        </div>
-        <div class="entry-content">
-            {{- record.body -}}
-        </div>
-        {% if record.taxonomy.forms is defined %}
-            {% for name,form in record.taxonomy.forms %}
-                {% set formname = name|replace({ '/forms/':'' }) %}
-                <div class="entry-content">
-                    {{- boltforms(formname) -}}
-                </div>
-            {% endfor %}
-        {% endif %}
-        <footer class="entry-footer">{{- include( 'partials/_social.twig' ) -}}</footer>
-    </article>
-{% endblock primary %}
+{% block content %}
+    <div class="flex-wrapper">
+        {%- for largeBlock in largeBlocks -%}
+            <div class="col-sm-8 col-xs-12 flex-item flex-item-large">
+                {% set item = largeBlock %}
+                {{- block( 'item' ) -}}
+            </div>
+        {%- endfor -%}
+        {%- for smallBlock in smallBlocks -%}
+            <div class="col-sm-4 col-xs-12 flex-item flex-item-small">
+                {% set item = smallBlock %}
+                {{- block( 'item' ) -}}
+            </div>
+        {%- endfor -%}
+    </div>
+{% endblock content %}
 
-{# Secondary #}
-{% block secondary %}
-    {% setcontent links = 'blocks/handige-links' %}
-    {% setcontent social = 'blocks/volg-ons-op-social-media' %}
-    <aside id="" class="widget">
-        <h3 class="widget-title">{{ links.title }}</h3>
-        {{- links.content -}}
-    </aside>
-    <aside id="" class="widget">
-        <h3 class="widget-title">{{ social.title }}</h3>
-        {{- social.content -}}
-    </aside>
-{% endblock secondary %}
+{# Item #}
+{% block item %}
+    <div class="panel panel-default flex-item-content">
+        <div class="panel-heading">
+            <h3 class="panel-title strong">{{- item.title -}}</h3>
+        </div>
+        <div class="panel-body">
+            <p>{{- item.teaser -}}</p>
+            <a class="btn btn-primary" href="{{ item.contenttype.slug ~ '/' ~ item.slug }}">Lees meer</a>
+        </div>    
+    </div>
+{% endblock item %}
+
+{# Add some styling #}
+{% block stylesheets %}
+{{- parent() -}}
+<style>a.btn{color:#fff}@media screen and (min-width: 768px){.flex-wrapper{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-flow:row wrap}.flex-item-content{height:95%;padding-bottom:40px}a.btn{position:absolute;bottom:40px;right:30px}}@media screen and (min-width: 768px) and (max-width: 1199px){.flex-item{-webkit-box-flex:1 40%;-moz-box-flex:1 40%;-webkit-flex:1 40%;-ms-flex:1 40%;flex:1 40%}.flex-item-large{flex:-webkit-box-flex: 2 60%;-moz-box-flex:2 60%;-webkit-flex:2 60%;-ms-flex:2 60%;flex:2 60%}.flex-item-small{-webkit-box-flex:1 40%;-moz-box-flex:1 40%;-webkit-flex:1 40%;-ms-flex:1 40%;flex:1 40%}}@media screen and (min-width: 1200px){.flex-item{-webkit-box-flex:3 33%;-moz-box-flex:3 33%;-webkit-flex:3 33%;-ms-flex:3 33%;flex:3 33%}.flex-item-large{flex:-webkit-box-flex: 2 50%;-moz-box-flex:2 50%;-webkit-flex:2 50%;-ms-flex:2 50%;flex:2 50%}.flex-item-small{-webkit-box-flex:2 25%;-moz-box-flex:2 25%;-webkit-flex:2 25%;-ms-flex:2 25%;flex:2 25%}}</style>
+{%- endblock stylesheets %}
+
+{#
+        a.btn {
+            color: white;
+        }
+        @media screen and (min-width: 768px) {
+            .flex-wrapper {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .flex-item-content {
+                height: 95%;
+                padding-bottom: 40px;
+            }
+            a.btn {
+                position: absolute;
+                bottom: 40px;
+                right: 30px;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            .flex-item {
+                -webkit-box-flex: 1 40%;
+                -moz-box-flex: 1 40%;
+                -webkit-flex: 1 40%;
+                -ms-flex: 1 40%;
+                flex: 1 40%;
+            }
+            .flex-item-large {
+                flex: 
+                -webkit-box-flex: 2 60%;
+                -moz-box-flex: 2 60%;
+                -webkit-flex: 2 60%;
+                -ms-flex: 2 60%;
+                flex: 2 60%;
+            }
+            .flex-item-small {
+                -webkit-box-flex: 1 40%;
+                -moz-box-flex:  1 40%;
+                -webkit-flex:  1 40%;
+                -ms-flex:  1 40%;
+                flex: 1 40%;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .flex-item {
+                -webkit-box-flex: 3 33%;
+                -moz-box-flex: 3 33%;
+                -webkit-flex: 3 33%;
+                -ms-flex: 3 33%;
+                flex: 3 33%;
+            }
+            .flex-item-large {
+                flex: 
+                -webkit-box-flex: 2 50%;
+                -moz-box-flex: 2 50%;
+                -webkit-flex: 2 50%;
+                -ms-flex: 2 50%;
+                flex: 2 50%;
+            }
+            .flex-item-small {
+                -webkit-box-flex: 2 25%;
+                -moz-box-flex:  2 25%;
+                -webkit-flex:  2 25%;
+                -ms-flex:  2 25%;
+                flex:  2 25%;
+            }
+        }
+#}

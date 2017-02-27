@@ -90,7 +90,16 @@
 (function($) {
 	$('.widget').each(function() {
 		$(this).find('a').each(function() {
-			$(this).prop('rel', 'nofollow');
+			$(this)
+				.prop('rel', 'nofollow')
+				.prop('target', '_blank');
 		});
+	});
+})(jQuery);
+
+// Hreflang attribute
+(function($) {
+	$('a').each(function() {
+		$(this).prop('hreflang', 'nl');
 	});
 })(jQuery);
